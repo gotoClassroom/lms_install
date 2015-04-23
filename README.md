@@ -15,13 +15,13 @@ Get Lms install script
 Install
 -------------
 
-   
+
 
     $ cd lms_install
 
 > Edit file webapp.conf change domain www.pesome.com with your Lms domain
 
-> Insert Amazon S3 to file s3.yml
+> Insert Amazon S3 to files s3.yml and amzon_ses.rb
 
 Run file install.sh
 
