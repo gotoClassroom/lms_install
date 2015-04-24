@@ -1,4 +1,4 @@
-web:  
+web:
   build: .
   working_dir: /home/app/webapp/go_to_classroom
   ports:
@@ -18,6 +18,10 @@ db:
   environment:
     MYSQL_DATABASE: lms_production
     MYSQL_ROOT_PASSWORD: root
+  volumes:
+    - /var/lib/mysql
+    - cache/:/tmp/cache
+    - ~/configs:/etc/configs/:ro
 
 elasticsearch:
   build: elasticsearch/.
