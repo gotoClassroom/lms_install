@@ -26,7 +26,12 @@ chmod +x  mysql/update.sh
 
 git clone https://github.com/Pithikos/docker-enter.git docker-enter
 
-gcc docker-enter/docker-enter.c -o docker-enter/docker-enter & sudo rm -rf /usr/bin/docker-enter & sudo mv ./docker-enter/docker-enter /usr/bin
+gcc docker-enter/docker-enter.c -o docker-enter/docker-enter
+
+sudo rm -rf /usr/bin/docker-enter
+
+sudo mv ./docker-enter/docker-enter /usr/bin
+
 
 fig build --no-cache
 
