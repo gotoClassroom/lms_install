@@ -27,8 +27,18 @@ Run file install.sh
 
     $ sudo chmod +x install.sh
     $ sudo ./install.sh
-    $ fig ps
-    $ docker-enter root_web_1
+    $ sudo fig ps
+    $ sudo docker-enter lmsinstall_web_1
     $ cd /home/app/webapp/go_to_classroom
     $ sudo -u app -H rake RAILS_ENV=production db:migrate assets:precompile
+    $ exit
+
+Update code
+-------------
+
+    $ sudo fig ps
+    $ sudo docker-enter lmsinstall_web_1
+    $ cd /home/app/webapp/go_to_classroom
+    $ sudo chmod +x update.sh
+    $ ./update.sh
     $ exit
