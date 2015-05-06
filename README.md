@@ -23,6 +23,8 @@ Install
 
 > Insert Amazon S3 to files s3.yml and amzon_ses.rb
 
+> Edit file fig.yml with HOST, PROTOCOL, EMAIL_FROM
+
 Run file install.sh
 
     $ sudo chmod +x install.sh
