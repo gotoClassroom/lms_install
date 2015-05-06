@@ -31,7 +31,7 @@ Run file install.sh
     $ sudo docker-enter lmsinstall_web_1
     $ cd /home/app/webapp/go_to_classroom
     $ sudo -u app -H rake RAILS_ENV=production db:migrate assets:precompile
-    $ sudo -u app -H RAILS_ENV=production bin/delayed_job run --exit-on-complete
+    $ sudo -u app -H RAILS_ENV=production bin/delayed_job start
     $ exit
 
 Update code
