@@ -34,6 +34,9 @@ RUN /pd_build/ruby2.2.sh
 #   Node.js and Meteor support.
 RUN /pd_build/nodejs.sh
 
+# Install imagemagick
+RUN apt-get install -y imagemagick libmagick++-dev libmagic-dev && apt-get clean
+
 # ...put your own build instructions here...
 RUN npm install bower -g
 RUN rm -f /etc/service/nginx/down

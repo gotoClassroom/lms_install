@@ -33,6 +33,6 @@ sudo rm -rf /usr/bin/docker-enter
 sudo mv ./docker-enter/docker-enter /usr/bin
 
 
-fig build --no-cache
+sudo fig build --no-cache
 
-fig up --no-recreate -d
+sudo fig up --no-recreate -d
