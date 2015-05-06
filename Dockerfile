@@ -49,6 +49,7 @@ RUN sudo -u app -H git clone -b lms https://0425f933fa963abb745bfaf637f906e52572
 ADD database.yml /home/app/webapp/go_to_classroom/config/database.yml
 ADD update.sh /home/app/webapp/go_to_classroom/update.sh
 ADD s3.yml /home/app/webapp/go_to_classroom/config/s3.yml
+ADD amazon_ses.rb /home/app/webapp/go_to_classroom/config/amazon_ses.rb
 RUN chmod -R g+w /home/app/webapp/go_to_classroom/log
 WORKDIR /home/app/webapp/go_to_classroom
 RUN sudo -u app -H bundle config build.nokogiri --use-system-libraries
