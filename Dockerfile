@@ -55,6 +55,8 @@ WORKDIR /home/app/webapp/go_to_classroom
 RUN sudo -u app -H bundle config build.nokogiri --use-system-libraries
 RUN sudo -u app -H bundle install --path vendor/bundle
 RUN rake tmp:cache:clear
+RUN gem install whenever
+RUN whenever --update-cron
 USER root
 #ADD secret_key.conf /etc/nginx/main.d/secret_key.conf
 #ADD gzip_max.conf /etc/nginx/conf.d/gzip_max.conf
