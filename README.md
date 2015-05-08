@@ -2,7 +2,7 @@ Lms Install
 ===================
 
 
-Script for install Lms
+Script to install LMS on your own Server
 
 ----------
 
