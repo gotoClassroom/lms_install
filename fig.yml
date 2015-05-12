@@ -21,6 +21,7 @@ db:
   environment:
     MYSQL_DATABASE: lms_production
     MYSQL_ROOT_PASSWORD: root
+    MYSQL_CHARSET: utf8
   volumes:
     - /var/lib/mysql
     - cache/:/tmp/cache
