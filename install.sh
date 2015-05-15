@@ -18,12 +18,6 @@ if [ 0 == $PKG_OK ]; then
   curl -L https://github.com/docker/fig/releases/download/1.0.1/fig-`uname -s`-`uname -m` > /usr/local/bin/fig; chmod +x /usr/local/bin/fig
 fi
 
-chmod +x  mysql/5.7/docker-entrypoint.sh
-
-chmod +x  mysql/update.sh
-
-./mysql/update.sh
-
 if [ -f /usr/bin/docker-enter ]; then
   echo "Docker enter exist!"
 else
