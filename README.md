@@ -23,7 +23,7 @@ Install
 
 > Insert Amazon S3 to files s3.yml and amzon_ses.rb
 
-> Edit file fig.yml with HOST, PROTOCOL, EMAIL_FROM
+> Edit file .env with HOST, PROTOCOL, EMAIL_FROM
 
 Run file install.sh
 
@@ -32,7 +32,7 @@ Run file install.sh
     $ sudo fig ps
     $ sudo docker-enter lmsinstall_web_1
     $ cd /home/app/webapp/go_to_classroom
-    $ sudo -u app -H rake RAILS_ENV=production db:migrate assets:precompile
+    $ sudo -u app -H rake RAILS_ENV=production db:migrate db:reindex assets:precompile
     $ sudo -u app -H RAILS_ENV=production bin/delayed_job start
     $ exit
 
